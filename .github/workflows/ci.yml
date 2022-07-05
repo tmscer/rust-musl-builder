@@ -85,13 +85,13 @@ jobs:
             TOOLCHAIN=${{ matrix.toolchain }}
           # Use some slightly funky substituations to tag only `stable` as `latest`.
           tags: |
-            ghcr.io/emk/rust-musl-builder:${{ matrix.toolchain }}
-            ekidd/rust-musl-builder:${{ matrix.toolchain }}
-            ${{ matrix.toolchain == 'stable' && 'ghcr.io/emk/rust-musl-builder:latest' || '' }}
-            ${{ matrix.toolchain == 'stable' && 'ekidd/rust-musl-builder:latest' || '' }}
+            ghcr.io/tmscer/rust-musl-builder:${{ matrix.toolchain }}
+            tmscer/rust-musl-builder:${{ matrix.toolchain }}
+            ${{ matrix.toolchain == 'stable' && 'ghcr.io/tmscer/rust-musl-builder:latest' || '' }}
+            ${{ matrix.toolchain == 'stable' && 'tmscer/rust-musl-builder:latest' || '' }}
           labels: |
             org.opencontainers.image.title=rust-musl-builder
             org.opencontainers.image.description=Tools for statically linked Rust programs using musl-libc
-            org.opencontainers.image.url=https://github.com/emk/rust-musl-builder
-            org.opencontainers.image.source=https://github.com/emk/rust-musl-builder
+            org.opencontainers.image.url=https://github.com/tmscer/rust-musl-builder
+            org.opencontainers.image.source=https://github.com/tmscer/rust-musl-builder
             net.randomhacks.rust-musl-builder.toolchain=${{ matrix.toolchain }}
