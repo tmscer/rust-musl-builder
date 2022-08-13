@@ -55,7 +55,7 @@ jobs:
           # See https://rust-lang.github.io/rustup-components-history/ and choose
           # the newest nightly build that has all the components (except RLS,
           # which is obsolete).
-          - "nightly-2021-12-23"
+          - "nightly-2022-08-11"
 
     steps:
       - name: Check out the repo
